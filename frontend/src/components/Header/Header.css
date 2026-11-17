@@ -1,0 +1,134 @@
+.pavaman-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 10px 20px;
+}
+
+.pavaman-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003366;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3A3A98;
+
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #0056b3;
+}
+
+.login-buttons {
+  display: flex;
+}
+
+.login-btn {
+  padding: 10px;
+  border: 1px solid #3A3A98;
+  border-radius: 6px;
+  background-color: #3A3A98;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  width: auto;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-icon {
+  color: #3a3a98;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 150px;
+  border-radius: 4px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu a {
+  padding: 8px 16px;
+  text-align: left;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  /* background-color: #f0f0f0; */
+  font-weight: 600;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    padding: 0px 5px 0px 28px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
